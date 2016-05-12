@@ -9,6 +9,8 @@ Connecting to Office 365 is the first step every app must take to start working 
 
 If you set the value of _authenticationContext.UseCorporateNetwork (in AuthenticationHelper.cs) to true so that you can use this app inside a corporate intranet. If the value of UseCorporateNetwork is true, you also need to add the Enterprise Authentication, Private Networks, and Shared User Certificates capabilities in the Package.appxmanifest file.
 
+![Office 365 UWP Sample screenshot6](/README assets/screenshot6.png)
+
 ## Register your application with Azure Active Directory
 	1. Sign into the Azure Management Portal using your Office 365 Tenant Administrator credentials.
 	2. Click Active Directory on the left menu, then click on the directory for your Office 365 developer site. 
