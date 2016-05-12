@@ -1,0 +1,13 @@
+﻿<Application
+    x:Class="WindowsCalendarSample.App"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:WindowsCalendarSample"
+    RequestedTheme="Light">
+    <Application.Resources>
+        <x:String x:Key="ida:ClientId">9278ee36-c024-424d-ac7f-bbda67df4544</x:String>
+        <x:String x:Key="ida:AADInstance">https://login.microsoftonline.com/</x:String>
+        <x:String x:Key="ida:Domain">chadbrooks.onmicrosoft.com</x:String>
+    </Application.Resources>
+
+</Application>

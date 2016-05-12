@@ -1,0 +1,57 @@
+﻿<Page
+    x:Class="WindowsCalendarSample.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:WindowsCalendarSample"
+    xmlns:common="using:WindowsCalendarSample.Common"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d" Width="861.76">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="90"/>
+            <RowDefinition Height="90"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
+
+        </Grid.ColumnDefinitions>
+        <Image Grid.Column="1" Source="Assets/O365Logo.jpg" Height="70" Margin="10,0,40,0"/>
+        <TextBlock x:Name="appTitle" Grid.Column="2" Text="Office 365 Add to Calendar Sample" 
+                       HorizontalAlignment="Center" 
+                       VerticalAlignment="Center" 
+                       Style="{StaticResource HeaderTextBlockStyle}"
+                       />
+        <StackPanel Grid.Row="1" Grid.Column="2" Orientation="Horizontal" HorizontalAlignment="Right">
+            <Button Background="White"  Command="{Binding ToggleSignInCommand}" VerticalAlignment="Bottom" Margin="0,0,15,15">
+                <RelativePanel>
+                    <Image x:Name="imgO365Logo" Height="25" Source="Assets/O365Logo.jpg"/>
+                    <TextBlock RelativePanel.RightOf="imgO365Logo" RelativePanel.AlignBottomWith="imgO365Logo"
+                               Text="{Binding LogOnCaption}"/>
+                </RelativePanel>
+            </Button>
+            <Image Source="{Binding Avatar}" Height="50" Margin="10,0,0,0"/>
+            <StackPanel Margin="20,0,20,15" VerticalAlignment="Bottom">
+                <TextBlock Text="{Binding DisplayName}" Margin="0,10,0,0"/>
+                <TextBlock Text="{Binding JobTitle}" Margin="0,10,0,0"/>
+            </StackPanel>
+        </StackPanel>
+        <StackPanel Grid.Row="3" Grid.Column="2">
+            <TextBlock Text="Event Name"/>
+            <TextBox x:Name="txtEventName" Text="Test Event Name" TextChanged="TextControls_TextChanged"/>
+            <TextBlock Text="Attendees"/>
+            <TextBox x:Name="txtAttendees" Text="" TextChanged="TextControls_TextChanged"/>
+            <TextBlock Text="Location"/>
+            <TextBox x:Name="txtLocation" Text="Test Location" TextChanged="TextControls_TextChanged"/>
+            <TextBlock Text="Meeting Duration"/>
+            <TextBox x:Name="txtDurationInMinutes" Text="60" TextChanged="TextControls_TextChanged"/>
+            <TextBlock Text="Body"/>
+            <TextBox x:Name="txtBody" Text="Test Body" TextChanged="TextControls_TextChanged"/>
+        </StackPanel>
+    </Grid>
+</Page>
